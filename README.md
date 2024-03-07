@@ -10,4 +10,4 @@ This repository provides the official PyTorch implementation of the paper.
 #### TL;DR
 This paper explores a novel in-between exposure mode called global reset release (GRR) shutter, which produces GS-like blur but with row-dependent blur magnitude. We take advantage of this unique characteristic of GRR to explore the latent frames within a single image and restore a clear counterpart by relying only on these latent contexts.
 
-<img width="900" alt="image" src="docs/shutter_modes.png">
+<img width="800" alt="image" src="docs/shutter_modes.png">
