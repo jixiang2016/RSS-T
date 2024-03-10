@@ -17,21 +17,17 @@ def synchronize():
 
     dist.barrier()
 
-# called in is_main_process()
 def get_rank():
     if not dist.is_nccl_available():
         return 0
-    if not dist.is_initialized(): # Default process group is not initialized i.e. donn't use multi-pc multi-gpu
+    if not dist.is_initialized(): 
         return 0
     return dist.get_rank()
 
-# called in ./pythia/utils/configuration.py  _update_specific()
-# called in print_only_main()
-def is_main_process(): # is main process group(== main pc ) or not?
+
+def is_main_process(): 
     return get_rank() == 0
 
-
-#  called in ./pythia/utils/general.py  get_batch_size()
 def get_world_size():
     if not dist.is_nccl_available():
         return 1
@@ -105,16 +101,11 @@ def reduce_dict(dictionary):
         dist.reduce(values, dst=0)
 
         if dist.get_rank() == 0:
-            # only main process gets accumulated, so only divide by
-            # world_size in this case
             values /= world_size
         reduced_dict = {k: v for k, v in zip(keys, values)}
     return reduced_dict
 
 	
-	
-	
-# called in ./pythia/utils/configuration.py  _update_specific()
 def print_only_main(string):
     if is_main_process():
         print(string)

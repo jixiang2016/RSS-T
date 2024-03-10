@@ -12,16 +12,16 @@ class Logger:
     def __init__(self, config):
         self.logger = None
         self.timer = Timer()
-        self.save_dir = config.output_dir # "./train_log"
+        self.save_dir = config.output_dir 
         self.log_folder = config.dataset_name  
         
         time_format = "%Y-%m-%dT%H:%M:%S"
         self.log_filename = self.log_folder + "_"   
         self.log_filename += self.timer.get_time_hhmmss(None, format=time_format) 
-        self.log_filename += ".log"  # "GOPROBase_RSGR_3_5_2021-11-17T22:09:35.log"
+        self.log_filename += ".log"  
 
         self.log_folder = os.path.join(self.save_dir, self.log_folder,'log') 
-		# if not exist, create
+
         if not os.path.exists(self.log_folder):
             os.makedirs(self.log_folder, exist_ok=True)
 
@@ -63,8 +63,7 @@ class Logger:
 
         self.should_log = config.should_log 
 
-
-    # executing on all threads	
+	
     def write(self, x, level="info", donot_print=False, log_all=False):
         if self.logger is None:
             return
@@ -75,14 +74,13 @@ class Logger:
         
         if self.should_log: # True
             if hasattr(self.logger, level):
-                if donot_print: # only log in file 
-                    getattr(self._file_only_logger, level)(str(x)) # self._file_only_logger.info(str(x))
+                if donot_print:
+                    getattr(self._file_only_logger, level)(str(x)) 
                 else:
-                    getattr(self.logger, level)(str(x)) # self.logger.info(str(x))
+                    getattr(self.logger, level)(str(x)) 
             else:
                 self.logger.error("Unknown log level type: %s" % level)
-				
-        # if it should not log then just print it
+
         else:
             print(str(x) + "\n")
 
