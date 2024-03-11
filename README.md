@@ -79,7 +79,7 @@ If you find our work useful, please kindly cite as:
 ```
 
 ## Acknowledgement
-This project is based on public works bellow:
+This project is based on public works below:
 
 - [neural-global-shutter](https://github.com/lightChaserX/neural-global-shutter)
 - [MIMO-UNet](https://github.com/chosj95/MIMO-UNet)
