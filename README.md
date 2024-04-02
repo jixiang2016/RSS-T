@@ -54,12 +54,12 @@ GRR_real
 - Please download checkpoints from this [link](https://drive.google.com/drive/folders/1vH4VTys36bcJLKuu22GKz3RR3bFTd5fb?usp=sharing) and put them under root directory of this project.
 
 ## Test
-To test RSS-T, please run the command bellow:
+To test RSS-T, please run the command below:
 ``` shell
 bash ./test.sh       ### Please specify your data directory and output path in the script
 ```
 ## Train
-To train RSS-T, please run the command bellow:
+To train RSS-T, please run the command below:
 ``` shell
 bash ./train.sh       ### Please refer to the script for more info.
 ```
