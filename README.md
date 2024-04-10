@@ -1,5 +1,5 @@
 ## Single Image Deblurring with Row-dependent Blur Magnitude
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=jixiang2016/RSS-T)  [Paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Ji_Single_Image_Deblurring_with_Row-dependent_Blur_Magnitude_ICCV_2023_paper.pdf) | [Supp](https://openaccess.thecvf.com/content/ICCV2023/supplemental/Ji_Single_Image_Deblurring_ICCV_2023_supplemental.pdf) | [Dataset](https://drive.google.com/file/d/1l0GMiv2xMcVaSuIY4E7f3zPljtRq1mju/view)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=jixiang2016/RSS-T)  [Paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Ji_Single_Image_Deblurring_with_Row-dependent_Blur_Magnitude_ICCV_2023_paper.pdf) | [Supp](https://openaccess.thecvf.com/content/ICCV2023/supplemental/Ji_Single_Image_Deblurring_ICCV_2023_supplemental.pdf) | [Dataset](https://drive.google.com/file/d/1l0GMiv2xMcVaSuIY4E7f3zPljtRq1mju/view?usp=drive_link)
 
 Xiang Ji<sup>1</sup>, Zhixiang Wang<sup>1,2</sup>, Shin'ichi Satoh<sup>2,1</sup>, Yinqiang Zheng<sup>1</sup>
 
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 ## Data and Pretrained Model
-- Download datasets [GRR_real](https://drive.google.com/file/d/1l0GMiv2xMcVaSuIY4E7f3zPljtRq1mju/view) and [RSGR-GS_v1](https://drive.google.com/file/d/1gkZpdtDPMGyQF6t-GVq6YgjQ3QfknVRv/view).
+- Download datasets [GRR_real](https://drive.google.com/file/d/1l0GMiv2xMcVaSuIY4E7f3zPljtRq1mju/view?usp=drive_link) and [RSGR-GS_v1](https://drive.google.com/file/d/1gkZpdtDPMGyQF6t-GVq6YgjQ3QfknVRv/view).
 - Unzip them under a specified directory by yourself.
 - The dataset folder structure should be like the format below (Minor adjustments to the folder structure of RSGR-GS_v1 may be needed.):
 ```
